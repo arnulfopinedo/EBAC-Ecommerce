@@ -1,0 +1,9 @@
+.products{
+    .products__btn {
+        @include products-btn;
+        @extend %bg-btn-primary;
+    }
+    .products__btn--disabled {
+        @extend %bg-btn-secondary;
+    }
+}

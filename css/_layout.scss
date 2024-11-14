@@ -1,0 +1,139 @@
+body{
+    font-family: $fontFamily;
+}
+
+header{
+    @include flexbox;
+    @extend %flexbox;
+    i {
+        .header__img {
+            transition: all .3s ease;
+            &:hover {
+                transform: scale(1.09);
+            }
+        }        
+    }
+    img {
+        @extend %img;
+    }
+    .badge {
+        @include cartMenuNum;
+        @include phones{
+            left: 92.5%;
+        }
+        @include tablets{
+            left: 96.5%;
+        }
+    }
+}
+
+main {
+    .banner{
+        @include banner;
+        .banner__title{
+            @include banner-title;
+        }
+        .banner__description{
+            @include banner-description;
+        }
+    }
+    .tenis {
+        .tenis__adidas{
+            @include titulo_tenis;
+            @extend %titleAdidas;
+        }
+    } 
+    .products {
+        @include grid;
+        .products__img {
+            @include grid-img;
+        }
+        .products__title , .products__price{
+            @include productos-title-price;
+        }        
+    }
+    .ropa {
+        .ropa__adidas {
+            @include ropa-adidas;
+            @extend %titleAdidas;
+        }
+    }
+    .cart {
+        @include cart;
+        .cart__close {
+            @include cartClose;
+            img {
+                @extend %cartIconClose;
+            }
+        }
+        .cart__title {
+            @include cartTitle;
+        }
+        .cart__item {
+            @include cartItem;
+        }
+        .cart__img {
+            @include cartImg;
+        }        
+        .cart__description, .cart__price {
+            @extend %cartDesPri;
+        }        
+        .cart__iconL, .cart__iconR, .cart__icon, .cartMenu__icon {
+            @extend %cartIcon;
+        }
+        button {
+            @include carBtn;
+        }
+        &.show {
+            @extend %show;
+        }
+        @include phones {
+            width: 100%;
+            right: -105%;
+        }
+        @include tablets{
+            width: 50%
+        }
+    }
+    .cartMenu {
+        @include cartMenu;
+        .cartMenu__close {
+            @include cartClose;
+            img {
+                @extend %cartIconClose;
+            }
+        }
+        .cartMenu__title {
+            @include cartTitle;
+        }
+        .cartMenu__item {
+            @include cartItem;
+            .products__img {
+                @include cartImg;
+            }
+        }
+        .cartMenu__img {
+            @include cartImg;
+        }        
+        .cartMenu__description, .cartMenu__price {
+            @extend %cartDesPri;
+        }        
+        .cartMenu__icon {
+            @extend %cartIcon;
+        }
+        button {
+            @include carBtn;
+        }
+        &.showMenu {
+            @extend %showMenu;
+        }
+        @include phones {
+            width: 100%;
+            left: -105%;
+        }
+        @include tablets{
+            width: 50%
+        }
+    }
+}
+

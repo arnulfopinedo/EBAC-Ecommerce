@@ -1,0 +1,266 @@
+header {
+  position: fixed;
+  background: #ffffff;
+}
+
+main .cartMenu .cartMenu__description, main .cartMenu .cartMenu__price, main .cart .cart__description, main .cart .cart__price {
+  font-weight: 500;
+}
+
+main .cartMenu .cartMenu__icon, main .cart .cart__iconL, main .cart .cart__iconR, main .cart .cart__icon, main .cart .cartMenu__icon {
+  width: 24px;
+  cursor: pointer;
+}
+
+main .cartMenu .cartMenu__close img, main .cart .cart__close img {
+  width: 30px;
+  cursor: pointer;
+}
+
+main .cartMenu .cartMenu__item, main .cart .cart__item {
+  border-bottom: 1px solid #dfdcdc;
+}
+
+header img {
+  width: 28px;
+  cursor: pointer;
+}
+
+main .ropa .ropa__adidas, main .tenis .tenis__adidas {
+  text-shadow: 1px 2px 2px #20bcf4;
+}
+
+.products .products__btn {
+  background-color: #009dfe;
+}
+
+.products .products__btn--disabled {
+  background-color: #d1d1d1;
+}
+
+main .cart.show {
+  right: 0;
+}
+
+main .cartMenu.showMenu {
+  left: 0;
+}
+
+body {
+  font-family: "Lexend", Arial, Helvetica, sans-serif;
+}
+
+header {
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px 20px;
+}
+header i .header__img {
+  transition: all 0.3s ease;
+}
+header i .header__img:hover {
+  transform: scale(1.09);
+}
+header .badge {
+  position: absolute;
+  top: 2px;
+  left: 98.5%;
+  background: #a4362e;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  padding: 4px;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 48rem) {
+  header .badge {
+    left: 92.5%;
+  }
+}
+@media screen and (max-width: 60rem) {
+  header .badge {
+    left: 96.5%;
+  }
+}
+
+main .banner {
+  width: 100%;
+  padding: 60px 20px;
+  text-align: center;
+  background-image: url("../img/portada.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ffffff;
+  background-position-y: 65%;
+  box-sizing: border-box;
+}
+main .banner .banner__title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 10px 0;
+}
+main .banner .banner__description {
+  font-size: 1.5rem;
+  opacity: 0.9;
+}
+main .tenis .tenis__adidas {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 20px;
+}
+main .products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  width: 80%;
+  margin: 10px auto;
+  gap: 30px 20px;
+}
+main .products .products__img {
+  width: 100%;
+}
+main .products .products__title, main .products .products__price {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+  margin: 10px 0;
+}
+main .ropa .ropa__adidas {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 20px;
+}
+main .cart {
+  width: 25%;
+  height: auto;
+  position: fixed;
+  background-color: #ffffff;
+  right: -50%;
+  top: 50px;
+  padding: 25px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 8px 6px rgba(0, 0, 0, 0.3019607843);
+  transition: all 0.25s ease;
+}
+main .cart .cart__close {
+  display: flex;
+  justify-content: flex-end;
+}
+main .cart .cart__title {
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 25px 0;
+  box-sizing: border-box;
+}
+main .cart .cart__item {
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px 20px;
+}
+main .cart .cart__img {
+  width: 60px;
+}
+main .cart button {
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 20px;
+}
+@media screen and (max-width: 48rem) {
+  main .cart {
+    width: 100%;
+    right: -105%;
+  }
+}
+@media screen and (max-width: 60rem) {
+  main .cart {
+    width: 50%;
+  }
+}
+main .cartMenu {
+  width: 25%;
+  height: auto;
+  position: fixed;
+  background-color: #ffffff;
+  left: -50%;
+  top: 50px;
+  padding: 25px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 8px 6px rgba(0, 0, 0, 0.3019607843);
+  transition: all 0.25s ease;
+}
+main .cartMenu .cartMenu__close {
+  display: flex;
+  justify-content: flex-end;
+}
+main .cartMenu .cartMenu__title {
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 25px 0;
+  box-sizing: border-box;
+}
+main .cartMenu .cartMenu__item {
+  width: 100%;
+  display: flex;
+  padding: 10px;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px 20px;
+}
+main .cartMenu .cartMenu__item .products__img {
+  width: 60px;
+}
+main .cartMenu .cartMenu__img {
+  width: 60px;
+}
+main .cartMenu button {
+  background-color: #000000;
+  color: #ffffff;
+  font-weight: 600;
+  padding: 10px;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 20px;
+}
+@media screen and (max-width: 48rem) {
+  main .cartMenu {
+    width: 100%;
+    left: -105%;
+  }
+}
+@media screen and (max-width: 60rem) {
+  main .cartMenu {
+    width: 50%;
+  }
+}
+
+.products .products__btn {
+  display: block;
+  border: none;
+  color: #ffffff;
+  border-radius: 20px;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  font-weight: 600;
+  cursor: pointer;
+}/*# sourceMappingURL=main.css.map */
